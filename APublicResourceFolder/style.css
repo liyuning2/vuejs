@@ -1,0 +1,100 @@
+body {
+    background: #ffffff;
+    font-size: 62.5%;
+    color: #6c6e69;
+    overflow: hidden;
+}
+header, section {
+    background: #e9ebe6;
+    padding-top: 1em;
+    overflow: hidden;
+}
+#header {
+    height:15%;
+}
+header strong {
+    font-size: 2.8em;
+}
+section {
+    height:50%;
+}
+article {
+    display: flex; 
+    align-items: center;
+    height:100%;
+}
+footer {
+    height: 35%;
+}
+#copyright .container .row {
+    display: flex;
+    align-items:center;
+}
+#copyright .container .row{
+    height:40%;
+}
+#copyright .container .row:first-child div{
+    height: 100%;
+    line-height: 500%;
+}
+#copyright .container .row:first-child div:first-child{
+    border-right: 1px solid #eeeeee;
+}
+#copyright .container .row:first-child{
+    border-bottom:1px solid #eeeeee;
+}
+#copyright .container .row:last-child{
+    height:20%;
+}
+#copyright .container #controller div{
+    height:100%;
+    display: flex;
+    align-items:center;
+}
+#copyright .container #controller div i{
+    margin:0 auto;
+}
+#copyright .container .row:last-child small{
+    margin:0 auto;
+    transform: scale(0.6);
+}
+#copyright .container .row input {
+    height: 100%;
+    border: none;
+    text-align: center;
+    border-color: none !important;
+    background: transparent;
+}
+#temperature{
+    width: 18em;
+}
+.temperature{
+    padding-right:0em;
+    font-size: 21em;
+}
+#unit i{
+    font-size: 5em;
+}
+#weather i{
+    font-size: 5em;
+}
+.superscript{
+    padding-top:2.8em;
+    padding-left:0em;
+    position:relative;
+    height:12em;
+}
+.superscript .container-fluid{
+    padding: 0px;
+}
+.superscript .container-fluid:last-child {
+    position: absolute;
+    bottom: 0em;
+}
+
+.superscript li {
+    list-style-type: none;
+}
+.press {
+    background: #ebebeb;
+}

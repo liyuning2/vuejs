@@ -1,0 +1,69 @@
+<html slick-uniqueid="3">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="./bundle.js" charset="utf8" async="async"></script>
+</head>
+<body>
+    <header class="col-xs-12" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <p class="text-left">
+                        <strong>{{ location }}</strong><br/>
+                        <small>Outside wind scale: {{ windscale }}  Humidity: {{ humidity }}%  PM2.5: {{ pm }}</small>
+                    </p>
+                </div>
+                <div class="col-xs-3">
+                    <p class="text-right">
+                        <i class="iconfont">{{{ menu }}}</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="col-xs-12">
+        <article class="col-xs-12">
+            <div class="container">
+                <div class="center-block" id="temperature">
+                    <div class="temperature col-xs-9">
+                        {{ temperature }}
+                    </div>
+                    <div class="superscript col-xs-3">
+                        <div class="container-fluid"><small id="unit"><i class="iconfont">{{{ temperature_sign }}}</i></small></div>
+                        <div class="container-fluid"><small id="weather"><i class="iconfont">{{{ weather }}}</i>{{ heat_status }}</small></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer id="copyright" class="text-center col-xs-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 text-center text-danger">
+                    Power
+                </div>
+                <div class="col-xs-6 text-center">
+                    Mode
+                </div>
+            </div>
+            <div class="row" id="controller">
+                <div class="col-xs-3 text-center" v-on:click="tapMinusContorller">
+                    <i class="iconfont">{{{ minus }}}</i>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <input class="col-xs-12" placeholder="{{ placeholder }}" 
+                        value="{{ 0 <= positve + negative ?  30 >= positve + negative ? positve + negative : 30 :  0}}" 
+                    disabled/>
+                </div>
+                <div class="col-xs-3 text-center" v-on:click="tapPlusContorller">
+                    <i class="iconfont">{{{ plus }}}</i>
+                </div>
+            </div>
+            <div class="row">
+                <small>Supported by XZY support</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
