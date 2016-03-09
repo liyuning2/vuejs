@@ -39,20 +39,20 @@
     <footer id="copyright" class="text-center col-xs-12">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6 text-center text-danger">
+                <div class="col-xs-6 text-center" attr="power" v-bind:class="[switchMode ? text-danger : '']" v-on:click="switchModes">
                     Power
                 </div>
-                <div class="col-xs-6 text-center">
+                <div class="col-xs-6 text-center" attr="mode" v-bind:class="[!switchMode ? text-danger : '']" v-on:click="switchModes">
                     Mode
                 </div>
             </div>
-            <div class="row" id="controller">
+            <div class="row" id="controller" v-if="power">
                 <div class="col-xs-3 text-center" v-on:click="tapMinusContorller">
                     <i class="iconfont">{{{ minus }}}</i>
                 </div>
                 <div class="col-xs-6 text-center">
                     <input class="col-xs-12" placeholder="{{ placeholder }}" 
-                        value="{{ 0 <= positve + negative ?  30 >= positve + negative ? positve + negative : 30 :  0}}" 
+                        value="{{ pending }}" 
                     disabled/>
                 </div>
                 <div class="col-xs-3 text-center" v-on:click="tapPlusContorller">
@@ -66,4 +66,3 @@
     </footer>
 </body>
 </html>
-

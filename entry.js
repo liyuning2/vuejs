@@ -53,28 +53,35 @@ var header = new Vue({
 var copyright = new Vue({
     el: "#copyright",
     data: {
+        switchMode: true,
         plus: getIco('plus'),
         minus: getIco('minus'),
         placeholder: 'Temp',
         temperature: '',
-        positve: '',
-        negative: '',
+        pending: '',
+        power: true,
     },
     methods: {
         tapPlusContorller: function() {
             this.initNumber();
-            this.positve --;
+            30 > this.pending && this.pending ++;
         },
         tapMinusContorller: function() {
             this.initNumber();
-            this.negative --;
+            0 < this.pending && this.pending --;
         },
         initNumber: function() {
-            if (0 == this.positve.length) {
-                this.positve = 0;
+            if (0 == this.pending.length) {
+                this.pending = 0;
             }
-            if (0 == this.negative.length) {
-                this.negative = 0;
+        },
+        switchModes: function() {
+            window.console.log(this.props);
+            if (this.props && this.props.attr && 'power' == this.props.attr) {
+                this.switchMode = true;
+            }
+            if (this.props && this.props.attr && 'mode' == this.props.attr) {
+                this.switchMode = false;
             }
         }
     }

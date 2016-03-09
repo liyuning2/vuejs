@@ -35,7 +35,9 @@ footer {
 }
 #copyright .container .row:first-child div{
     height: 100%;
-    line-height: 500%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #copyright .container .row:first-child div:first-child{
     border-right: 1px solid #eeeeee;
@@ -44,18 +46,18 @@ footer {
     border-bottom:1px solid #eeeeee;
 }
 #copyright .container .row:last-child{
+    display: flex;
+    align-items:center;
+    justify-content:center;    
     height:20%;
 }
 #copyright .container #controller div{
     height:100%;
     display: flex;
     align-items:center;
-}
-#copyright .container #controller div i{
-    margin:0 auto;
+    justify-content:center;
 }
 #copyright .container .row:last-child small{
-    margin:0 auto;
     transform: scale(0.6);
 }
 #copyright .container .row input {
